@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Rubik";
+  src: url(./Assets/Rubik/Rubik-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Questrial";
+  src: url(./Assets/Questrial/Questrial-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --primary-color: #25274d;
   --secondary-color: #494866;
@@ -13,7 +26,14 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "Questrial", sans-serif;
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 2.5rem;
 }
 .app {
   display: flex;
@@ -29,6 +49,9 @@ header {
   align-items: center;
   min-height: 7rem;
   padding: 0 2rem;
+  box-shadow: -2px 4px 3px 1px rgba(95,95,95,0.54);
+-webkit-box-shadow: -2px 4px 3px 1px rgba(95,95,95,0.54);
+-moz-box-shadow: -2px 4px 3px 1px rgba(95,95,95,0.54);
 }
 header>h1 {
   position: relative;
@@ -53,18 +76,19 @@ table {
 .campaignTable {
   width: 90vw;
   margin-top: 5rem;
+  box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
+-webkit-box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
+-moz-box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
 }
 .campaignTable thead {
-  border-top: solid 1px var(--color-black);
+
 } 
 .campaignTable th {
   text-align: left;
   padding-left: 2rem;
+  text-transform: uppercase;
 }
 .campaignTable tr {
-  border-bottom: solid 1px var(--color-black);
-  border-left: solid 1px var(--color-black);
-  border-right: solid 1px var(--color-black);;
   height: 5rem;
 }
 .campaignTable td {
