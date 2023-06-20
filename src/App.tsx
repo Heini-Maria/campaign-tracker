@@ -1,8 +1,14 @@
 import React from "react";
+import "App.css";
+import Header from "./Components/Header";
+import CampaignTable from "./Components/CampaignTable";
 
 function App() {
   return (
-    <h1>Hello world</h1>
+    <div className="app">
+      <Header />
+      <CampaignTable />
+    </div>
   );
 }
 

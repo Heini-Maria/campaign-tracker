@@ -1,0 +1,89 @@
+:root {
+  --primary-color: #25274d;
+  --secondary-color: #494866;
+  --color-valid: #368a29;
+  --color-invalid: #8a2f29;
+  --text-color: #f5f5f5;
+  --color-white: #f5f5f5;
+  --color-black: #151515;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+}
+.app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+header {
+  width: 100vw;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 7rem;
+  padding: 0 2rem;
+}
+header>h1 {
+  position: relative;
+}
+.search>* {
+  height: 2rem;
+}
+.search input {
+  border: none;
+  padding: 0.5rem;
+}
+.search input:focus {
+  outline: none;
+}
+.search button {
+  border: none;
+  padding: 0.5rem;
+}
+table {
+  border-collapse: collapse;
+}
+.campaignTable {
+  width: 90vw;
+  margin-top: 5rem;
+}
+.campaignTable thead {
+  border-top: solid 1px var(--color-black);
+} 
+.campaignTable th {
+  text-align: left;
+  padding-left: 2rem;
+}
+.campaignTable tr {
+  border-bottom: solid 1px var(--color-black);
+  border-left: solid 1px var(--color-black);
+  border-right: solid 1px var(--color-black);;
+  height: 5rem;
+}
+.campaignTable td {
+  text-align: left;
+  padding-left: 2rem;
+}
+.active {
+  color: var(--color-valid);
+  display: flex;
+  height: 5rem;
+  align-items: center;
+}
+.inactive {
+  color: var(--color-invalid);
+  display: flex;
+  height: 5rem;
+  align-items: center;
+}
+.active>*,
+.inactive>* {
+  margin-right: 0.5rem;
+}
