@@ -3,7 +3,7 @@ import { FaRegStopCircle,
   FaRegPlayCircle } from "react-icons/fa";
 import { statusCheck } from "../Utils/statusCheck";
 
-interface campaignProps {
+export interface campaignProps {
     name: string,
     startDate: string,
     endDate: string,

@@ -1,8 +1,7 @@
 import React from "react";
-import { data } from "../Utils/data";
 import CampaignItem from "./CampaignItem";
 
-function Table() {
+function Table({ campaigns }) {
   return (
     <table className="campaignTable">
       <thead><tr><th>This is Table</th></tr></thead>
@@ -14,7 +13,7 @@ function Table() {
           <th>End Date</th>
           <th>Budget</th>
         </tr>
-        {data.map((campaign) => (
+        {campaigns.map((campaign) => (
           <CampaignItem
             name={campaign.name}
             startDate={campaign.startDate}

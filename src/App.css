@@ -80,9 +80,6 @@ table {
 -webkit-box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
 -moz-box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
 }
-.campaignTable thead {
-
-} 
 .campaignTable th {
   text-align: left;
   padding-left: 2rem;
