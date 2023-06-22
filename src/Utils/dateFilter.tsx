@@ -1,4 +1,6 @@
-export const dateFilter = (campaigns, endDate, startDate) => {
+import { Campaigns } from "./types";
+
+export const dateFilter = (campaigns : Campaigns, endDate: string, startDate: string) => {
   const dateStart = new Date(startDate);
   const dateEnd = new Date(endDate);
   const result = campaigns.filter(

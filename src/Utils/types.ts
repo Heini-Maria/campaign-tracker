@@ -19,3 +19,7 @@ export interface SearchProps {
   setCampaigns: React.Dispatch<React.SetStateAction<Campaigns>>;
   campaigns: Campaigns;
 }
+
+export interface DateFilterFormProps {
+  toggleFilterForm: React.MouseEventHandler<HTMLButtonElement>;
+}

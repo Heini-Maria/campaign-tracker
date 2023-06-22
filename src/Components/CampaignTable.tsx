@@ -1,11 +1,12 @@
 import React from "react";
 import CampaignItem from "./CampaignItem";
+import Filter from "./Filter";
 import { Campaign, CampaignsProps } from "../Utils/types";
 
 function Table({ campaigns }: CampaignsProps) {
   return (
     <table className="campaignTable">
-      <thead><tr><th>This is Table</th></tr></thead>
+      <thead><tr><Filter /></tr></thead>
       <tbody>
         <tr>
           <th>Name</th>
