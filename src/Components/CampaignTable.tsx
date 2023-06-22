@@ -1,7 +1,8 @@
 import React from "react";
 import CampaignItem from "./CampaignItem";
+import { Campaign, CampaignsProps } from "../Utils/types";
 
-function Table({ campaigns }) {
+function Table({ campaigns }: CampaignsProps) {
   return (
     <table className="campaignTable">
       <thead><tr><th>This is Table</th></tr></thead>
@@ -13,13 +14,9 @@ function Table({ campaigns }) {
           <th>End Date</th>
           <th>Budget</th>
         </tr>
-        {campaigns.map((campaign) => (
+        {campaigns.map((campaign: Campaign) => (
           <CampaignItem
-            name={campaign.name}
-            startDate={campaign.startDate}
-            endDate={campaign.endDate}
-            Budget={campaign.Budget}
-            key={campaign.name}
+            campaign={campaign}
           />
         ))}
       </tbody>

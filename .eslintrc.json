@@ -10,6 +10,15 @@
       "plugin:@typescript-eslint/recommended"
   ],
   "overrides": [
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "import/no-unresolved": [
+          "error",
+          { "ignore": ["\\.css$"] }
+        ]
+      }
+    }
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {

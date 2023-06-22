@@ -2,21 +2,16 @@ import React, { useState, useEffect } from "react";
 import { FaRegStopCircle,
   FaRegPlayCircle } from "react-icons/fa";
 import { statusCheck } from "../Utils/statusCheck";
+import { CampaignProps } from "../Utils/types";
 
-export interface campaignProps {
-    name: string,
-    startDate: string,
-    endDate: string,
-    Budget: number,
-}
-function CampaignItem({ name, startDate, endDate, Budget }: campaignProps) {
+function CampaignItem({ campaign }: CampaignProps) {
   const [status, setStatus] = useState(false);
   useEffect(() => {
-    setStatus(statusCheck(endDate));
+    setStatus(statusCheck(campaign.endDate));
   });
   return (
     <tr className="campaign">
-      <td>{name}</td>
+      <td>{campaign.name}</td>
       {status ? (
         <td className="active">
           <FaRegPlayCircle />
@@ -28,10 +23,10 @@ function CampaignItem({ name, startDate, endDate, Budget }: campaignProps) {
           Inactive
         </td>
       )}
-      <td>{startDate}</td>
-      <td>{endDate}</td>
+      <td>{campaign.startDate}</td>
+      <td>{campaign.endDate}</td>
       <td>
-        {Budget}
+        {campaign.Budget}
         {" "}
         €
       </td>

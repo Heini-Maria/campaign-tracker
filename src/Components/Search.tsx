@@ -1,27 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaSearch } from "react-icons/fa";
 import { search } from "../Utils/search";
 import { data } from "../Utils/data";
+import { SearchProps } from "../Utils/types";
 
-function Search({ setCampaigns, campaigns }) {
-  const [input, setInput] = useState("");
-
-  const onSearch = async (string: string) => {
-    console.log(input);
-    const resultCampaigns = await search({ campaigns }, string);
-    setCampaigns(resultCampaigns);
+function Search({ setCampaigns, campaigns }: SearchProps) {
+  const onSearch = async (input: string) => {
+    if (input.length > 0) {
+      const resultCampaigns = await search(campaigns, input);
+      setCampaigns(resultCampaigns);
+    } else {
+      setCampaigns(data);
+    }
   };
 
   return (
-    <form className="search">
-      <input type="text" onChange={(e) => setInput(e.target.value)} />
-      <p>{input}</p>
+    <form
+      className="search"
+
+    >
+      <input
+        type="text"
+        onChange={(e) => {
+          e.preventDefault();
+          onSearch(e.target.value);
+        }}
+      />
       <button
         type="submit"
-        onSubmit={(e) => {
-          e.preventDefault;
-          onSearch({ input });
-        }}
       >
         <FaSearch />
       </button>

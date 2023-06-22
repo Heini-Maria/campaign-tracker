@@ -1,6 +1,7 @@
-import { campaignProps } from "../Components/CampaignItem";
+import { Campaigns } from "./types";
 
-export const search = (array: campaignProps[], input: string) => {
-  const result = array.filter((campaign) => campaign.name === input);
+export const search = (array: Campaigns, input: string) => {
+  const inputLower = input.toLowerCase();
+  const result = array.filter((campaign) => campaign.name.toLowerCase().includes(inputLower));
   return result;
 };

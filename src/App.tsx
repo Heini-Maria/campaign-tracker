@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "App.css";
 import { data } from "./Utils/data";
+import "App.css";
 import Header from "./Components/Header";
 import CampaignTable from "./Components/CampaignTable";
 
