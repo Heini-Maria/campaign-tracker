@@ -3,6 +3,7 @@ import { data } from "./Utils/data";
 import "App.css";
 import Header from "./Components/Header";
 import CampaignTable from "./Components/CampaignTable";
+import DateFilterForm from "./Components/DateFilterForm";
 
 function App() {
   const [campaigns, setCampaigns] = useState([]);

@@ -9,7 +9,7 @@ function Filter() {
     setVisible(!visible);
   };
   return (
-    <div>
+    <div className="filter">
       <button type="button" onClick={toggleFilterForm}>
         <FaFilter />
       </button>

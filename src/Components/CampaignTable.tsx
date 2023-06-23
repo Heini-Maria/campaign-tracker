@@ -6,7 +6,7 @@ import { Campaign, CampaignsProps } from "../Utils/types";
 function Table({ campaigns }: CampaignsProps) {
   return (
     <table className="campaignTable">
-      <thead><tr><Filter /></tr></thead>
+      <Filter />
       <tbody>
         <tr>
           <th>Name</th>
