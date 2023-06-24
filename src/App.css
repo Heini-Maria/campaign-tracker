@@ -38,6 +38,9 @@ h1 {
 }
 .app {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-right: 15rem;
 }
 header {
@@ -75,6 +78,7 @@ table {
 }
 .campaignTable {
   width: 90%;
+  gap: 2rem;
   margin-top: 5rem;
   box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
 -webkit-box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
@@ -137,6 +141,10 @@ table {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+.dateFilterForm label {
+  font-weight: bold;
+  align-self: flex-start;
 }
 .dateFilterForm form>button {
   color: var(--color-white);
