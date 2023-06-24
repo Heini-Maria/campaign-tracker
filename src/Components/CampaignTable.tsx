@@ -5,24 +5,26 @@ import { Campaign, CampaignsProps } from "../Utils/types";
 
 function Table({ campaigns }: CampaignsProps) {
   return (
-    <table className="campaignTable">
+    <div className="campaignTable">
       <Filter />
-      <tbody>
-        <tr>
-          <th>Name</th>
-          <th>Status</th>
-          <th>Start Date</th>
-          <th>End Date</th>
-          <th>Budget</th>
-        </tr>
-        {campaigns.map((campaign: Campaign) => (
-          <CampaignItem
-            campaign={campaign}
-          />
-        ))}
-      </tbody>
-      <tfoot />
-    </table>
+      <table>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Budget</th>
+          </tr>
+          {campaigns.map((campaign: Campaign) => (
+            <CampaignItem
+              campaign={campaign}
+            />
+          ))}
+        </tbody>
+        <tfoot />
+      </table>
+    </div>
   );
 }
 

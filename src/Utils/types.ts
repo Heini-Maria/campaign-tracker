@@ -21,5 +21,10 @@ export interface SearchProps {
 }
 
 export interface DateFilterFormProps {
-  toggleFilterForm: React.MouseEventHandler<HTMLButtonElement>;
+  toggleFilterForm: () => void;
+  startDate: Date | undefined;
+  endDate: Date | undefined;
+  setStartDate: (date: Date | undefined) => void;
+  setEndDate: (date: Date | undefined) => void;
+  setFilterDates: (dates: { startDate: Date; endDate: Date } | undefined) => void;
 }

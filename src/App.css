@@ -73,21 +73,23 @@ header>h1 {
   border: none;
   padding: 0.5rem;
 }
-table {
-  border-collapse: collapse;
+.filter{
+  padding: 2rem;
+  height: 5rem;
+  display: flex;
 }
 .campaignTable {
   width: 90%;
   gap: 2rem;
+  padding-top: 2rem;
   margin-top: 5rem;
   box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
 -webkit-box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
 -moz-box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
 }
-.filter{
-  padding: 2rem;
-  height: 5rem;
-  display: flex;
+.campaignTable table {
+  width: 100%; 
+  border-collapse: collapse;
 }
 .campaignTable th {
   text-align: left;
@@ -116,6 +118,11 @@ table {
 .active>*,
 .inactive>* {
   margin-right: 0.5rem;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 .dateFilterForm {
   position: fixed;
@@ -152,4 +159,12 @@ table {
   background-color: var(--secondary-color);
   font-size: 1.2rem;
   align-self: center;
+}
+.filter-item {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: var(--color-white);
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  height: 3.5rem;
 }
