@@ -4,6 +4,7 @@ import "react-date-picker/dist/DatePicker.css";
 import "react-calendar/dist/Calendar.css";
 import { FaTimes } from "react-icons/fa";
 import { DateFilterFormProps } from "../Utils/types";
+import { dateFilter } from "../Utils/dateFilter";
 
 function DateFilterForm({
   toggleFilterForm,
@@ -12,9 +13,17 @@ function DateFilterForm({
   setStartDate,
   setEndDate,
   setFilterDates,
+  campaigns,
+  setCampaigns,
 }: DateFilterFormProps) {
-  const handleSave = () => {
+  const handleSave = async () => {
+    console.log(startDate);
     setFilterDates({ startDate, endDate });
+    const result = await dateFilter(campaigns, startDate, endDate);
+    console.log(campaigns, startDate, endDate);
+    console.log(result);
+    setCampaigns(result);
+    console.log(campaigns);
   };
   return (
     <div className="dateFilterForm">

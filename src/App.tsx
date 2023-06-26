@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="app">
       <Header setCampaigns={setCampaigns} campaigns={campaigns} />
-      <CampaignTable campaigns={campaigns} />
+      <CampaignTable campaigns={campaigns} setCampaigns={setCampaigns} />
     </div>
   );
 }

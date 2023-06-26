@@ -12,7 +12,8 @@ export interface CampaignProps {
   campaign: Campaign
 }
 export interface CampaignsProps {
-  campaigns: Campaigns
+  campaigns: Campaigns;
+  setCampaigns: React.Dispatch<React.SetStateAction<Campaigns>>;
 }
 
 export interface SearchProps {
@@ -27,4 +28,6 @@ export interface DateFilterFormProps {
   setStartDate: (date: Date | undefined) => void;
   setEndDate: (date: Date | undefined) => void;
   setFilterDates: (dates: { startDate: Date; endDate: Date } | undefined) => void;
+  campaigns: Campaigns;
+  setCampaigns: React.Dispatch<React.SetStateAction<Campaigns>>;
 }

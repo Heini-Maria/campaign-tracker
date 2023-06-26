@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { FaFilter } from "react-icons/fa";
 import DateFilterForm from "./DateFilterForm";
 import FilterItem from "./FilterItem";
+import { CampaignsProps } from "../Utils/types";
 
-function Filter() {
+function Filter({ campaigns, setCampaigns } : CampaignsProps) {
   const [visible, setVisible] = useState(false);
   const [startDate, setStartDate] = useState<Date | undefined>(undefined);
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
@@ -15,13 +16,22 @@ function Filter() {
   const toggleFilterForm = () => {
     setVisible(!visible);
   };
+
+  const removeFilter = (string: string) => {
+    if (string === "Starting after") {
+      setFilterDates({ ...filterDates, startDate: undefined });
+    } else {
+      setFilterDates({ ...filterDates, endDate: undefined });
+    }
+  };
+
   return (
     <div className="filter">
       <button type="button" onClick={toggleFilterForm}>
         <FaFilter />
       </button>
-      {filterDates.startDate ? <FilterItem string="Starting after" date={filterDates.startDate.toLocaleDateString()} /> : null}
-      {filterDates.endDate ? <FilterItem string="Ending before" date={filterDates.startDate.toLocaleDateString()} /> : null}
+      {filterDates.startDate ? <FilterItem string="Starting after" date={filterDates.startDate.toLocaleDateString()} removeFilter={removeFilter} /> : null}
+      {filterDates.endDate ? <FilterItem string="Ending before" date={filterDates.startDate.toLocaleDateString()} removeFilter={removeFilter} /> : null}
       {visible ? (
         <DateFilterForm
           toggleFilterForm={toggleFilterForm}
@@ -30,6 +40,9 @@ function Filter() {
           endDate={endDate}
           setEndDate={setEndDate}
           setFilterDates={setFilterDates}
+          campaigns={campaigns}
+          setCampaigns={setCampaigns}
+
         />
       ) : null}
     </div>

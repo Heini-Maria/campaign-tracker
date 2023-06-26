@@ -167,4 +167,15 @@ header>h1 {
   margin-right: 0.5rem;
   border-radius: 0.5rem;
   height: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.filter-item button {
+background-color: var(--secondary-color);
+border: none;
+color: var(--color-white);
+cursor: pointer;
+font-size: 1.1rem;
+margin-bottom: -5px;
 }
