@@ -31,3 +31,9 @@ export interface DateFilterFormProps {
   campaigns: Campaigns;
   setCampaigns: React.Dispatch<React.SetStateAction<Campaigns>>;
 }
+
+export interface FilterItemProps {
+  string: string;
+  date: Date;
+  removeFilter: (string: string) => void;
+}

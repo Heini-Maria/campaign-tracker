@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CampaignItem from "./CampaignItem";
 import Filter from "./Filter";
 import { Campaign, CampaignsProps } from "../Utils/types";
@@ -19,6 +19,7 @@ function Table({ campaigns, setCampaigns }: CampaignsProps) {
           {campaigns.map((campaign: Campaign) => (
             <CampaignItem
               campaign={campaign}
+              key={campaign.id.toString()}
             />
           ))}
         </tbody>

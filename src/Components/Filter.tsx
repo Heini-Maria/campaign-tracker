@@ -19,9 +19,9 @@ function Filter({ campaigns, setCampaigns } : CampaignsProps) {
 
   const removeFilter = (string: string) => {
     if (string === "Starting after") {
-      setFilterDates({ ...filterDates, startDate: undefined });
+      setStartDate(undefined);
     } else {
-      setFilterDates({ ...filterDates, endDate: undefined });
+      setEndDate(undefined);
     }
   };
 
@@ -30,8 +30,8 @@ function Filter({ campaigns, setCampaigns } : CampaignsProps) {
       <button type="button" onClick={toggleFilterForm}>
         <FaFilter />
       </button>
-      {filterDates.startDate ? <FilterItem string="Starting after" date={filterDates.startDate.toLocaleDateString()} removeFilter={removeFilter} /> : null}
-      {filterDates.endDate ? <FilterItem string="Ending before" date={filterDates.startDate.toLocaleDateString()} removeFilter={removeFilter} /> : null}
+      {filterDates.startDate ? <FilterItem string="Starting after" date={startDate} removeFilter={removeFilter} /> : null}
+      {filterDates.endDate ? <FilterItem string="Ending before" date={endDate} removeFilter={removeFilter} /> : null}
       {visible ? (
         <DateFilterForm
           toggleFilterForm={toggleFilterForm}

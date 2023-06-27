@@ -1,18 +1,20 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
+import { formattedDate } from "../Utils/dateFilter";
+import { FilterItemProps } from "../Utils/types";
 
-function FilterItem({ string, date, removeFilter}) {
+function FilterItem({ string, date, removeFilter } : FilterItemProps) {
   return (
-    <thead className="filter-item">
-      <button type="button" onClick={()=>removeFilter(string)}><FaTimes /></button>
+    <div className="filter-item">
+      <button type="button" aria-label="remove filter" onClick={() => removeFilter(string)}><FaTimes /></button>
       <p>
         {string}
         :
       </p>
       <p>
-        {date}
+        {formattedDate(date)}
       </p>
-    </thead>
+    </div>
   );
 }
 

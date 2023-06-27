@@ -16,14 +16,11 @@ function DateFilterForm({
   campaigns,
   setCampaigns,
 }: DateFilterFormProps) {
-  const handleSave = async () => {
-    console.log(startDate);
-    setFilterDates({ startDate, endDate });
-    const result = await dateFilter(campaigns, startDate, endDate);
-    console.log(campaigns, startDate, endDate);
-    console.log(result);
+  const handleSave = async (starting: Date, ending: Date) => {
+    setFilterDates({ startDate: starting, endDate: ending });
+    console.log(startDate > endDate);
+    const result = await dateFilter(campaigns, endDate, startDate);
     setCampaigns(result);
-    console.log(campaigns);
   };
   return (
     <div className="dateFilterForm">
@@ -32,7 +29,7 @@ function DateFilterForm({
       </button>
       <form onSubmit={(e) => {
         e.preventDefault();
-        handleSave();
+        handleSave(startDate, endDate);
       }}
       >
         <label>Start date:</label>
