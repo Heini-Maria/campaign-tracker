@@ -12,7 +12,7 @@ function FilterItem({ string, date, removeFilter } : FilterItemProps) {
         :
       </p>
       <p>
-        {formattedDate(date)}
+        {date ? formattedDate(date) : null}
       </p>
     </div>
   );

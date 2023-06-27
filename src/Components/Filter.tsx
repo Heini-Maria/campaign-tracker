@@ -30,8 +30,8 @@ function Filter({ campaigns, setCampaigns } : CampaignsProps) {
       <button type="button" onClick={toggleFilterForm}>
         <FaFilter />
       </button>
-      {filterDates.startDate ? <FilterItem string="Starting after" date={startDate} removeFilter={removeFilter} /> : null}
-      {filterDates.endDate ? <FilterItem string="Ending before" date={endDate} removeFilter={removeFilter} /> : null}
+      {filterDates.startDate && startDate ? <FilterItem string="Starting after" date={startDate} removeFilter={removeFilter} /> : null}
+      {filterDates.endDate && endDate ? <FilterItem string="Ending before" date={endDate} removeFilter={removeFilter} /> : null}
       {visible ? (
         <DateFilterForm
           toggleFilterForm={toggleFilterForm}
