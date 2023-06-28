@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, startTransition } from "react";
 import { FaFilter } from "react-icons/fa";
 import DateFilterForm from "./DateFilterForm";
 import FilterItem from "./FilterItem";
 import { CampaignsProps } from "../Utils/types";
+import { dateFilter } from "../Utils/dateFilter";
+import { data } from "../Utils/data";
 
 function Filter({ campaigns, setCampaigns } : CampaignsProps) {
   const [visible, setVisible] = useState(false);
@@ -13,11 +15,19 @@ function Filter({ campaigns, setCampaigns } : CampaignsProps) {
     endDate: Date | undefined;
   }>({ startDate: undefined, endDate: undefined });
 
+  useEffect(() => {
+    console.log(endDate);
+    console.log(startDate);
+    const result = dateFilter(data, endDate, startDate);
+    console.log(result);
+    setCampaigns(result);
+  }, [endDate, startDate]);
+
   const toggleFilterForm = () => {
     setVisible(!visible);
   };
 
-  const removeFilter = (string: string) => {
+  const removeFilter = async (string: string) => {
     if (string === "Starting after") {
       setStartDate(undefined);
     } else {
