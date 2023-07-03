@@ -12,10 +12,10 @@
 }
 
 :root {
-  --primary-color: #25274d;
-  --secondary-color: #494866;
-  --color-valid: #368a29;
-  --color-invalid: #8a2f29;
+  --primary-color: #264b96;
+  --secondary-color: #393939;
+  --color-valid: #006f3c;
+  --color-invalid: #bf212f;
   --text-color: #f5f5f5;
   --color-white: #f5f5f5;
   --color-black: #151515;
@@ -52,9 +52,9 @@ header {
   align-items: center;
   min-height: 7rem;
   padding: 0 2rem;
-  box-shadow: -2px 4px 3px 1px rgba(95,95,95,0.54);
--webkit-box-shadow: -2px 4px 3px 1px rgba(95,95,95,0.54);
--moz-box-shadow: -2px 4px 3px 1px rgba(95,95,95,0.54);
+  box-shadow: -1px 4px 3px 3px rgba(100, 101, 108, 0.54);
+  -webkit-box-shadow: -1px 4px 3px 3px rgba(100, 101, 108, 0.54);
+  -moz-box-shadow: -1px 4px 3px 3px rgba(100, 101, 108, 0.54);
 }
 header>h1 {
   position: relative;
@@ -65,13 +65,15 @@ header>h1 {
 .search input {
   border: none;
   padding: 0.5rem;
+  background-color: var(--color-white);
 }
 .search input:focus {
   outline: none;
 }
 .search button {
   border: none;
-  padding: 0.5rem;
+  padding-right:  0.5rem;
+  background-color: var(--color-white);
 }
 .filter{
   padding: 2rem;
@@ -83,9 +85,9 @@ header>h1 {
   gap: 2rem;
   padding-top: 2rem;
   margin-top: 5rem;
-  box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
--webkit-box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
--moz-box-shadow: -1px 4px 3px 5px rgba(95,95,95,0.54);
+  box-shadow: -1px 4px 3px 3px rgba(100, 101, 108, 0.54);
+  -webkit-box-shadow: -1px 4px 3px 3px rgba(100, 101, 108, 0.54);
+  -moz-box-shadow: -1px 4px 3px 3px rgba(100, 101, 108, 0.54);
 }
 .campaignTable table {
   width: 100%; 
@@ -132,7 +134,7 @@ header>h1 {
   align-items: center;
   justify-items: flex-start;
   right: 0;
-  top: 0;
+  top: 7.3rem;
   width: 15rem;
   padding: 2rem;
   height: 100%;
