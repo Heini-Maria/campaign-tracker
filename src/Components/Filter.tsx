@@ -1,4 +1,4 @@
-import React, { useState, useEffect, startTransition } from "react";
+import React, { useState, useEffect } from "react";
 import { FaFilter } from "react-icons/fa";
 import DateFilterForm from "./DateFilterForm";
 import FilterItem from "./FilterItem";
@@ -15,24 +15,23 @@ function Filter({ campaigns, setCampaigns } : CampaignsProps) {
     endDate: Date | undefined;
   }>({ startDate: undefined, endDate: undefined });
 
+  const removeFilter = async (string: string) => {
+    if (string === "Starting after") {
+      setFilterDates({ ...filterDates, startDate: undefined });
+      setStartDate(undefined);
+    } else {
+      setFilterDates({ ...filterDates, endDate: undefined });
+      setEndDate(undefined);
+    }
+  };
+
   useEffect(() => {
-    console.log(endDate);
-    console.log(startDate);
     const result = dateFilter(data, endDate, startDate);
-    console.log(result);
     setCampaigns(result);
-  }, [endDate, startDate]);
+  }, [filterDates]);
 
   const toggleFilterForm = () => {
     setVisible(!visible);
-  };
-
-  const removeFilter = async (string: string) => {
-    if (string === "Starting after") {
-      setStartDate(undefined);
-    } else {
-      setEndDate(undefined);
-    }
   };
 
   return (
@@ -40,8 +39,8 @@ function Filter({ campaigns, setCampaigns } : CampaignsProps) {
       <button type="button" onClick={toggleFilterForm}>
         <FaFilter />
       </button>
-      {filterDates.startDate && startDate ? <FilterItem string="Starting after" date={startDate} removeFilter={removeFilter} /> : null}
-      {filterDates.endDate && endDate ? <FilterItem string="Ending before" date={endDate} removeFilter={removeFilter} /> : null}
+      {filterDates.startDate && startDate ? <FilterItem string="Starting after" date={filterDates.startDate} removeFilter={removeFilter} /> : null}
+      {filterDates.endDate && endDate ? <FilterItem string="Ending before" date={filterDates.endDate} removeFilter={removeFilter} /> : null}
       {visible ? (
         <DateFilterForm
           toggleFilterForm={toggleFilterForm}
