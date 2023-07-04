@@ -29,6 +29,7 @@ function DateFilterForm({
       <form onSubmit={(e) => {
         e.preventDefault();
         handleSave(startDate, endDate);
+        toggleFilterForm();
       }}
       >
         <label>Start date:</label>
