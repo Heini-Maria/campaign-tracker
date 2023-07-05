@@ -6,8 +6,7 @@ import { CampaignsProps } from "../Utils/types";
 import { dateFilter } from "../Utils/dateFilter";
 import { data } from "../Utils/data";
 
-function Filter({ campaigns, setCampaigns } : CampaignsProps) {
-  const [visible, setVisible] = useState(false);
+function Filter({ campaigns, setCampaigns, visible, setVisible } : CampaignsProps) {
   const [startDate, setStartDate] = useState<Date | undefined>(undefined);
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [filterDates, setFilterDates] = useState<{

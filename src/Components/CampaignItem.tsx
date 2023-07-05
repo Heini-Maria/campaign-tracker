@@ -26,7 +26,7 @@ function CampaignItem({ campaign }: CampaignProps) {
       <td>{campaign.startDate}</td>
       <td>{campaign.endDate}</td>
       <td>
-        {campaign.Budget}
+        {campaign.budget}
         {" "}
         €
       </td>

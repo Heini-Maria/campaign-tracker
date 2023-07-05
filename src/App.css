@@ -81,13 +81,17 @@ header>h1 {
   display: flex;
 }
 .campaignTable {
-  width: 90%;
+  width: 80%;
   gap: 2rem;
   padding-top: 2rem;
-  margin-top: 5rem;
+  margin-top: 10rem;
   box-shadow: -1px 4px 3px 3px rgba(100, 101, 108, 0.54);
   -webkit-box-shadow: -1px 4px 3px 3px rgba(100, 101, 108, 0.54);
   -moz-box-shadow: -1px 4px 3px 3px rgba(100, 101, 108, 0.54);
+}
+.campaignTable-small {
+  margin-right: 9rem;
+  transition: margin-right 0.5s linear;
 }
 .campaignTable table {
   width: 100%; 
@@ -138,11 +142,12 @@ button {
   align-items: center;
   justify-items: flex-start;
   right: 0;
-  top: 7.3rem;
-  width: 15rem;
+  top: 7.5rem;
+  width: 13rem;
   padding: 2rem;
   height: 100%;
   background-color: var(--color-white);
+  transition: width 5s linear;
 }
 .dateFilterForm button {
   align-self: end;
