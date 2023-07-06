@@ -3,7 +3,7 @@ export interface Campaign {
   name: string,
   startDate: string,
   endDate: string,
-  Budget: number,
+  budget: number,
 }
 
 export type Campaigns = Campaign[];
@@ -14,6 +14,12 @@ export interface CampaignProps {
 export interface CampaignsProps {
   campaigns: Campaigns;
   setCampaigns: React.Dispatch<React.SetStateAction<Campaigns>>;
+}
+export interface FilterProps {
+  campaigns: Campaigns;
+  setCampaigns: React.Dispatch<React.SetStateAction<Campaigns>>;
+  visible: boolean;
+  setVisible: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface SearchProps {

@@ -4,10 +4,15 @@ import Filter from "./Filter";
 import { Campaign, CampaignsProps } from "../Utils/types";
 
 function Table({ campaigns, setCampaigns }: CampaignsProps) {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState<boolean>(false);
   return (
-    <div className={visible ? "campaignTable campaignTable-small" : "campaignTable"}>
-      <Filter campaigns={campaigns} setCampaigns={setCampaigns} visible={visible} setVisible={setVisible} />
+    <div className={visible ? "campaignTable campaignTable-small" : "campaignTable campaignTable-normal"}>
+      <Filter
+        campaigns={campaigns}
+        setCampaigns={setCampaigns}
+        visible={visible}
+        setVisible={setVisible}
+      />
       <table>
         <tbody>
           <tr>

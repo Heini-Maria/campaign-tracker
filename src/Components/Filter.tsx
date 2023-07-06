@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { FaFilter } from "react-icons/fa";
 import DateFilterForm from "./DateFilterForm";
 import FilterItem from "./FilterItem";
-import { CampaignsProps } from "../Utils/types";
+import { FilterProps } from "../Utils/types";
 import { dateFilter } from "../Utils/dateFilter";
 import { data } from "../Utils/data";
 
-function Filter({ campaigns, setCampaigns, visible, setVisible } : CampaignsProps) {
+function Filter({ campaigns, setCampaigns, visible, setVisible } : FilterProps) {
   const [startDate, setStartDate] = useState<Date | undefined>(undefined);
   const [endDate, setEndDate] = useState<Date | undefined>(undefined);
   const [filterDates, setFilterDates] = useState<{
@@ -50,7 +50,6 @@ function Filter({ campaigns, setCampaigns, visible, setVisible } : CampaignsProp
           setFilterDates={setFilterDates}
           campaigns={campaigns}
           setCampaigns={setCampaigns}
-
         />
       ) : null}
     </div>

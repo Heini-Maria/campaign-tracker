@@ -2,6 +2,7 @@ import React from "react";
 import DatePicker from "react-date-picker";
 import "react-date-picker/dist/DatePicker.css";
 import "react-calendar/dist/Calendar.css";
+import { motion } from "framer-motion";
 import { FaTimes } from "react-icons/fa";
 import { DateFilterFormProps } from "../Utils/types";
 import { dateFilter } from "../Utils/dateFilter";
@@ -22,7 +23,13 @@ function DateFilterForm({
     setCampaigns(result);
   };
   return (
-    <div className="dateFilterForm">
+    <motion.div
+      className="dateFilterForm"
+      initial={{ x: "50%" }}
+      animate={{ x: 0 }}
+      exit={{ x: "-50%" }}
+      transition={{ duration: 0.5, ease: "linear" }}
+    >
       <button type="button" onClick={toggleFilterForm}>
         <FaTimes />
       </button>
@@ -43,7 +50,7 @@ function DateFilterForm({
         />
         <button type="submit">Filter</button>
       </form>
-    </div>
+    </motion.div>
   );
 }
 

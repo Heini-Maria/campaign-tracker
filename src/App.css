@@ -93,6 +93,10 @@ header>h1 {
   margin-right: 9rem;
   transition: margin-right 0.5s linear;
 }
+.campaignTable-normal {
+  margin-right: 0;
+  transition: margin-right 0.5s linear;
+}
 .campaignTable table {
   width: 100%; 
   border-collapse: collapse;
@@ -142,12 +146,11 @@ button {
   align-items: center;
   justify-items: flex-start;
   right: 0;
+  opacity: 1;
   top: 7.5rem;
-  width: 13rem;
   padding: 2rem;
   height: 100%;
   background-color: var(--color-white);
-  transition: width 5s linear;
 }
 .dateFilterForm button {
   align-self: end;
