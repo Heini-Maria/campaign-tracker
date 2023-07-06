@@ -1,8 +1,8 @@
 # campaign-tracker 
 
-Personal project to practise typescript with React. The React application is created from scratch, using webpack.
+Personal project to practise typescript with React. The React application is created from scratch, using Webpack.
 
-Campaign -tracker is a table based application to visualize imaginery company's marketing campaigns. The user can search camppaign by name and filter the campaigns by 
+Campaign -tracker is a table-based application to visualize an imaginary company's marketing campaigns. The user can search campaign by name and filter the campaigns by 
 based on selected start and end dates.
 
 Visit the deployed application here: 
