@@ -5,7 +5,7 @@ Personal project to practise typescript with React. The React application is cre
 Campaign -tracker is a table-based application to visualize an imaginary company's marketing campaigns. The user can search campaign by name and filter the campaigns by 
 based on selected start and end dates.
 
-Visit the deployed application here: 
+Visit the deployed application here: https://teal-jelly-c3cfce.netlify.app/
 
 ## Preview
 
