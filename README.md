@@ -9,7 +9,7 @@ Visit the deployed application here: https://teal-jelly-c3cfce.netlify.app/
 
 ## Preview
 
-![portfolio project pic](https://github.com/Heini-Maria/campaign-tracker/assets/115211431/dbc21df3-30b7-4b55-885f-63e643869860)
+![campaign-tracker](https://github.com/Heini-Maria/campaign-tracker/assets/115211431/6a8b7afa-4c24-46a6-afa2-92ef83c2a91e)
 
 ## Technologies used
 
